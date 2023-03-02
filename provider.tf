@@ -1,10 +1,10 @@
 provider "aws" {
   region  = "us-east-1"
-  profile = "demo"
+  profile = "dev"
 }
 
 provider "aws" {
-  alias   = "dev"
+  alias   = "demo"
   region  = "us-east-1"
   profile = "demo"
 }
