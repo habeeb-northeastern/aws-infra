@@ -19,3 +19,12 @@ variable "public_subnet" {
   type    = list(string)
   default = ["10.0.24.0/24", "10.0.26.0/24", "10.0.28.0/24"]
 }
+
+variable "ami_id" {
+  type    = string
+  default = "ami-0be02d8846066057c"
+}
+
+variable "app_port" {
+  default = 8080
+}
