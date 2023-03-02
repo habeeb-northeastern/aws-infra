@@ -77,64 +77,64 @@ resource "aws_instance" "app_instance" {
   }
 }
 
-resource "aws_db_security_group" "rdss_sg" {
-  name = "rds_sg"
+# resource "aws_db_security_group" "rdss_sg" {
+#   name = "rds_sg"
 
-  ingress {
-    from_port           = 3306
-    to_port             = 3306
-    security_group_name = "aws_security_group.app_sg"
-  }
-}
+#   ingress {
+#     from_port           = 3306
+#     to_port             = 3306
+#     security_group_name = "aws_security_group.app_sg"
+#   }
+# }
 
-resource "aws_s3_bucket" "bucket" {
+# resource "aws_s3_bucket" "bucket" {
 
-  lifecycle_rule {
-    id      = "log"
-    enabled = true
-    transition {
-      days          = 30
-      storage_class = "STANDARD_IA"
-    }
-  }
+#   lifecycle_rule {
+#     id      = "log"
+#     enabled = true
+#     transition {
+#       days          = 30
+#       storage_class = "STANDARD_IA"
+#     }
+#   }
 
-  force_destroy = true
+#   force_destroy = true
 
-  server_side_encryption_configuration {
-    bucket_key_enabled = true
-    rule {
-      apply_server_side_encryption_by_default {
-        sse_algorithm = "aws:kms"
-      }
-    }
-  }
-}
+#   server_side_encryption_configuration {
+#     bucket_key_enabled = true
+#     rule {
+#       apply_server_side_encryption_by_default {
+#         sse_algorithm = "aws:kms"
+#       }
+#     }
+#   }
+# }
 
-resource "aws_db_parameter_group" "rds_pg" {
-  name   = "rds-pg"
-  family = "mysql5.6"
+# resource "aws_db_parameter_group" "rds_pg" {
+#   name   = "rds-pg"
+#   family = "mysql5.6"
 
-  parameter {
-    name  = "character_set_server"
-    value = "utf8"
-  }
+#   parameter {
+#     name  = "character_set_server"
+#     value = "utf8"
+#   }
 
-  parameter {
-    name  = "character_set_client"
-    value = "utf8"
-  }
-}
+#   parameter {
+#     name  = "character_set_client"
+#     value = "utf8"
+#   }
+# }
 
 
-resource "aws_db_instance" "rds_instance" {
-  allocated_storage    = 10
-  db_name              = "csye6225"
-  identifier           = "csye6225"
-  engine               = "mysql"
-  instance_class       = "db.t3.micro"
-  username             = "csye6225"
-  password             = "habeebRDS"
-  db_subnet_group_name = "db_pri_subnet"
-  parameter_group_name = "rds_pg"
-  multi_az             = false
-}
+# resource "aws_db_instance" "rds_instance" {
+#   allocated_storage    = 10
+#   db_name              = "csye6225"
+#   identifier           = "csye6225"
+#   engine               = "mysql"
+#   instance_class       = "db.t3.micro"
+#   username             = "csye6225"
+#   password             = "habeebRDS"
+#   db_subnet_group_name = "db_pri_subnet"
+#   parameter_group_name = "rds_pg"
+#   multi_az             = false
+# }

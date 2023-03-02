@@ -22,7 +22,7 @@ variable "public_subnet" {
 
 variable "ami_id" {
   type    = string
-  default = "ami-0be02d8846066057c"
+  default = "ami-0b3760ee521bba33e"
 }
 
 variable "app_port" {
