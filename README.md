@@ -1,14 +1,34 @@
 # aws-infra
-Setting up AWS Infrastructure to deploy a webapp created as part of CSYE 6225 curriculam
+Prerequisites:
 
-To start off, you will need to have aws cli and terraform installed.
-Also you will need to have an aws account setup and access keys configured using aws configure
+AWS Command Line Interface (CLI):
+. Configure AWS for IAM profile.
+  Command: AWS CONFIGURE --profile <#profileName>
+. Set AWS Credentials.
+   AWS Access Key ID [None]: XXXXXXXXXXXXXXXXXXXX
+   AWS Secret Access Key [None]: YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+   Default region name [None]: xx-xxxx-x
+   Default output format [None]: 
 
-#To initialise run:
-terraform init
+. Set Profile:
+  Set profileName in provider.tf
+  
+. Set CIDR:
+  Set CIDR value in main.tf
+  
+ Terraform:
+. Install Terraform 
+. Initialize Terraform 
+  Command: terraform init
+. Create Infrastructure
+  Command: terraform apply
+. Delete Infrastructure
+  Command: terraform destroy 
 
-#To check how things will work before actually creating run:
-terraform plan
-
-#To finally setup the aws environment run:
-terraform apply
+Networking Resources:
+. Create Virtual Private Cloud (VPC)
+. Create Public Subnets (3)
+. Create Private Subnets (3)
+. Create Internet Gateway
+. Create Private Route Table
+. Create Public Route Table
