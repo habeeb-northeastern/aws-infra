@@ -8,3 +8,8 @@ sudo echo "Bucket=${bucket_name}" >> /home/ec2-user/project/.env
 sudo echo "AWS_DEFAULT_REGION=${aws_default_region}" >> /home/ec2-user/project/.env
 sudo echo "AWS_KEY=${aws_key}" >> /home/ec2-user/project/.env
 sudo echo "AWS_ID=${aws_id}" >> /home/ec2-user/project/.env
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl \
+ -a fetch-config \
+ -m ec2 \
+ -c file:/home/ec2-user/project/cloudWatchAgent.json \
+ -s

@@ -1,68 +1,55 @@
 variable "cidr" {
-  type = string
+  type    = string
   default = "10.0.0.0/16"
 }
 
 variable "available_zones" {
-  type = list(string)
+  type    = list(string)
   default = ["us-east-1a", "us-east-1b", "us-east-1c"]
 
 }
 variable "region" {
   type    = string
   default = "us-east-1"
-}
 
-variable "app_port" {
-  default = 8080
 }
-
 variable "profile" {
-  type    = string
-  default = "prod"
+  type = string
+
 }
 variable "ami_id" {
-  type    = string
-  default = "ami-02badb092d4d180e3"
+  type = string
 
 }
+variable "app_port" {
+  type    = string
+  default = "8080"
 
+}
 variable "password" {
-  type = string
-  default = "Coffeebites1$"
+  type    = string
+  default = "maseerah"
+
 }
 variable "name" {
-  type = string
+  type    = string
   default = "csye6225"
+
 }
 variable "AWS_KEY" {
   type    = string
-  default = "AKIASEE4BOWZQWZFG24R"
+  default = "TEGaACcyqwYnJWqWRj4GKipV6Pgyk+wRigzuilsf"
 }
 variable "AWS_ID" {
   type    = string
-  default = "SW/dtHWwa+STX99V1o9jnSPbID0ahYpwZSpV8bLy"
-}
-variable "aws_eip_vpc" {
-  type        = bool
-  default = true
-}
-variable "route53_record_name" {
-  type        = string
-  default = "habeebuddinmir.live"
+  default = "AKIAYMJYQN5NPWO6BI6Z"
 }
 
-variable "route53_record_zone_id" {
-  type        = string
-  default = "Z06139253KWDTBJLHKVYA"
+variable "record_name" {
+  type    = string
+  default = "demo.maseerahkhatoon.me"
 }
-
-variable "route53_record_type" {
-  type        = string
-  default = "A"
-}
-
-variable "route53_record_ttl" {
-  type        = string
-  default = "60"
+variable "record_zone_id" {
+  type    = string
+  default = "Z098857823HTXCR2IBT2P"
 }
