@@ -28,7 +28,7 @@ variable "app_port" {
 }
 variable "password" {
   type    = string
-  default = "maseerah"
+  default = "Coffeebites1$"
 
 }
 variable "name" {
@@ -38,18 +38,18 @@ variable "name" {
 }
 variable "AWS_KEY" {
   type    = string
-  default = "TEGaACcyqwYnJWqWRj4GKipV6Pgyk+wRigzuilsf"
+  default = "SW/dtHWwa+STX99V1o9jnSPbID0ahYpwZSpV8bLy"
 }
 variable "AWS_ID" {
   type    = string
-  default = "AKIAYMJYQN5NPWO6BI6Z"
+  default = "AKIASEE4BOWZQWZFG24R"
 }
 
 variable "record_name" {
   type    = string
-  default = "demo.maseerahkhatoon.me"
+  default = "demo.habeebuddinmir.live"
 }
 variable "record_zone_id" {
   type    = string
-  default = "Z098857823HTXCR2IBT2P"
+  default = "Z060912111HCKNH0SG9LA"
 }
