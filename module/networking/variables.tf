@@ -28,7 +28,6 @@ variable "app_port" {
 }
 variable "password" {
   type    = string
-  default = "Coffeebites1$"
 
 }
 variable "name" {
@@ -38,11 +37,9 @@ variable "name" {
 }
 variable "AWS_KEY" {
   type    = string
-  default = "SW/dtHWwa+STX99V1o9jnSPbID0ahYpwZSpV8bLy"
 }
 variable "AWS_ID" {
   type    = string
-  default = "AKIASEE4BOWZQWZFG24R"
 }
 
 variable "record_name" {
@@ -51,5 +48,4 @@ variable "record_name" {
 }
 variable "record_zone_id" {
   type    = string
-  default = "Z060912111HCKNH0SG9LA"
 }
